@@ -45,9 +45,12 @@ const CUSS_WORDS = [
   
   let index = 0
 
-const handlerFn = async function() {
-
+  schedule('* * * * *', () => {
+      console.log("RuNnInG")
     index += 1
+  });
+
+const handlerFn = async function() {
     return {
         statusCode: 200,
         headers: {
@@ -58,4 +61,4 @@ const handlerFn = async function() {
     };
 }; 
 
-module.exports.handler = schedule('* * * * *', handlerFn)
+module.exports.handler = handlerFn
