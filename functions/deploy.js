@@ -43,9 +43,10 @@ const CUSS_WORDS = [
     "PIMP",
   ];
   
+  let index = 0
 
 const handlerFn = async function() {
-    let index = 0
+
     index += 1
     return {
         statusCode: 200,
