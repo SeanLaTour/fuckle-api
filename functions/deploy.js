@@ -1,8 +1,9 @@
 const { schedule } = require('@netlify/functions')
 
-const index = 0
+
 
 const handlerFn = async function(index) {
+    const index = 0
     index += 1
     return {
         statusCode: 200,
@@ -10,4 +11,4 @@ const handlerFn = async function(index) {
     };
 };
 
-module.exports.handler = schedule('* * * * *', handlerFn(index))
+module.exports.handler = schedule('* * * * *', handlerFn)
