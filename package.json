@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "node  src/index.js",
-    "build": "node build/index.js",
+    "build": "node_modules/.bin/netlify-lambda build src",
     "dev": "tsc -w & nodemon ."
   },
   "name": "fuckle-api1",
