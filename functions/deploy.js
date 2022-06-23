@@ -4,7 +4,6 @@ const { schedule } = require('@netlify/functions')
 
 const handlerFn = async function() {
     let index = 0
-    index += 1
     return {
         statusCode: 200,
         body: `Number index: ${index}`
