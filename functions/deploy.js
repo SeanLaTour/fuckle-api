@@ -1,5 +1,5 @@
-const { schedule } = require('@netlify/functions')
 
+const increment = require('./increment')
 const CUSS_WORDS = [
     "FUCK",
     "SHIT",
@@ -43,12 +43,7 @@ const CUSS_WORDS = [
     "PIMP",
   ];
   
-  let index = 0
-
-  schedule('* * * * *', () => {
-      console.log("RuNnInG")
-    index += 1
-  });
+console.log(increment)
 
 const handlerFn = async function() {
     return {
@@ -57,7 +52,7 @@ const handlerFn = async function() {
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Headers": "Authorization, Content-Type"
         },
-        body: JSON.stringify(`Cuss word: ${CUSS_WORDS[index]}`)
+        body: JSON.stringify(`Cuss word: ${CUSS_WORDS[increment]}`)
     };
 }; 
 
