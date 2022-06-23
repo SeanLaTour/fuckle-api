@@ -1,12 +1,13 @@
 const { schedule } = require('@netlify/functions')
 
-const handlerFn = async function(event, context) {
-    console.log("Received event:", event)
+const index = 0
 
+const handlerFn = async function(index) {
+    index += 1
     return {
         statusCode: 200,
-        body: "heyo"
+        body: `Number index: ${index}`
     };
 };
 
-module.exports.handler = schedule('@hourly', handlerFn)
+module.exports.handler = schedule('* * * * *', handlerFn(index))
