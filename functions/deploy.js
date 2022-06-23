@@ -1,6 +1,48 @@
 const { schedule } = require('@netlify/functions')
 
-
+const CUSS_WORDS = [
+    "FUCK",
+    "SHIT",
+    "PISS",
+    "CUNT",
+    "DICK",
+    "JIZZ",
+    "TITS",
+    "COCK",
+    "DONG",
+    "TWAT",
+    "FART",
+    "POOP",
+    "NIPS",
+    "CRAP",
+    "HELL",
+    "THOT",
+    "DAMN",
+    "SIMP",
+    "ARSE",
+    "WANK",
+    "CUCK",
+    "SLUT",
+    "WANK",
+    "NUTS",
+    "BUTT",
+    "SHAG",
+    "GASH",
+    "JUGS",
+    "MUFF",
+    "BANG",
+    "DIKE",
+    "SLIT",
+    "DUMP",
+    "CLIT",
+    "HUMP",
+    "TURD",
+    "ANAL",
+    "FROT",
+    "GIMP",
+    "PIMP",
+  ];
+  
 
 const handlerFn = async function() {
     let index = 0
@@ -11,7 +53,7 @@ const handlerFn = async function() {
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Headers": "Authorization, Content-Type"
         },
-        body: `Number index: ${index}`
+        body: JSON.stringify(`Cuss word: ${CUSS_WORDS[index]}`)
     };
 }; 
 
