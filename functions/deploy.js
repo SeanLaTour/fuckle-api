@@ -9,6 +9,6 @@ const handlerFn = async function(index) {
         statusCode: 200,
         body: `Number index: ${index}`
     };
-};
+}; 
 
 module.exports.handler = schedule('* * * * *', handlerFn)
