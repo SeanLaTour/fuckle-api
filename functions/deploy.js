@@ -3,7 +3,7 @@ const { schedule } = require('@netlify/functions')
 
 
 const handlerFn = async function(index) {
-    const index = 0
+    let index = 0
     index += 1
     return {
         statusCode: 200,
