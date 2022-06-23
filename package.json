@@ -2,8 +2,11 @@
   "main": "dist/index.js",
   "homepage": "https://fuckle-api",
   "dependencies": {
+    "@netlify/functions": "^1.0.0",
     "cors": "^2.8.5",
     "express": "^4.18.1",
+    "netlify-cli": "^10.6.1",
+    "netlify-lambda": "^2.0.15",
     "node-cron": "^3.0.1",
     "serverless-http": "^3.0.1",
     "uuid": "^8.3.2"
@@ -15,8 +18,21 @@
     "typescript": "^4.7.4"
   },
   "scripts": {
-    "build": "./node_modules/.bin/netlify-lambda build src",
     "start": "node  src/index.js",
+    "build": "node build/index.js",
     "dev": "tsc -w & nodemon ."
+  },
+  "name": "fuckle-api1",
+  "description": "",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeanLaTour/fuckle-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeanLaTour/fuckle-api/issues"
   }
 }
